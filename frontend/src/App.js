@@ -24,10 +24,19 @@ function Navbar() {
   const navigate = useNavigate();
   return (
     <header className="navbar">
-      <button onClick={() => navigate(-1)}>Back</button>
-      <Link to="/">Home</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/about">About</Link>
+      {/* Home button on the left */}
+      <button
+        className="home-button"
+        onClick={() => navigate("/")}
+      >
+        Home
+      </button>
+
+      {/* Centered nav links */}
+      <div className="nav-links">
+        <Link to="/projects">Projects</Link>
+        <Link to="/about">About</Link>
+      </div>
     </header>
   );
 }

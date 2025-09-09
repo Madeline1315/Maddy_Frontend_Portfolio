@@ -24,29 +24,40 @@ h1, h2 {
 .navbar {
   background-color: white;
   padding: 10px 20px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: center; /* centers main nav links */
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar a {
+/* Home button floats to the far left */
+.navbar .home-button {
+  position: absolute;
+  left: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .nav-links a {
   text-decoration: none;
   color: #ff69b4;
   font-weight: bold;
 }
 
-.navbar button {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+
 
 .Projects {
   display: flex;
