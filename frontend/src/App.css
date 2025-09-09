@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background-color: #fff0f5; /* soft sakura pink */
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+}
+
+.App-header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.App h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #ff69b4;
+  font-family: 'Cosmic Sans MS', cursive, sans-serif;
+}
+
+h1, h2 {
+  color: #f4a7b9; /* sakura pink */
+}
+
+.navbar {
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.navbar button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: #ffe6f0;
+  border: 2px solid #f4a7b9;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: white;
+  background-color: #f4a7b9;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  background-color: #ff85b3;
+}
+
+.App-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #ff69b4;
+}
+
