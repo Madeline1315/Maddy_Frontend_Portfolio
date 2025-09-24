@@ -1,38 +1,56 @@
-/* Body Styles */
+/* =======================
+   Body and Page Wrapper
+======================= */
 body {
   margin: 0;
-  background-color: #fff0f5; /* soft sakura pink */
+  background-color: #ffeef7; /* soft pink background */
   font-family: 'Quicksand', sans-serif;
   color: #333;
 }
 
-/* Home Container */
-.home-container {
-  width: 100%;
-  padding: 20px;
+.page-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* centers everything horizontally */
+  justify-content: center; /* centers the container horizontally */
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
+/* =======================
+   Big Container Box
+======================= */
+.page-container {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #ffffff; /* white container */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #ffb6c1; /* optional for visual debugging */
+}
 
-/* Profile Header Styles */
+/* =======================
+   Profile Header
+======================= */
 .profile-header {
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #ffdde1, #e0f7fa); /* pink → baby blue */
+  color: #333;
   border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .profile-pic {
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  background: #ffc0cb; /* light pink */
   color: white;
   border-radius: 50%;
   display: flex;
@@ -55,42 +73,80 @@ body {
   font-size: 14px;
 }
 
-/* Separator Line */
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  text-align: center;
+  cursor: pointer;
+}
+
+.number {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.follow-btn {
+  padding: 8px 16px;
+  background: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.follow-btn:hover {
+  background: #ff69b4;
+  color: white;
+}
+
+.follow-btn.following {
+  background: rgba(255,192,203,0.3);
+}
+
+/* =======================
+   Separator Line
+======================= */
 .separator {
   height: 1px;
   background: linear-gradient(90deg, transparent, #ddd, transparent);
   margin: 20px 0;
+  width: 100%;
 }
 
-/* Projects Grid */
+/* =======================
+   Projects Grid
+======================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto)); /* auto instead of 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  justify-content: center; /* center the whole grid */
-}
-
-/* Project Card */
-/* Container for all project cards */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;          /* allows cards to move to next row */
-  justify-content: center;  /* centers all cards horizontally */
-  gap: 1.5rem;              /* spacing between cards */
-  padding: 2rem;
+  justify-items: center;
   width: 100%;
-  max-width: 1200px;        /* optional max width */
-  margin: 0 auto;           /* center container itself */
 }
 
-/* Individual project card */
+/* =======================
+   Project Cards
+======================= */
 .project-card {
-  width: 250px;             
-  background-color: #ffe6f0;
+  width: 250px;
+  text-align: center;
+  background-color: #ffe6f0; /* light pink for project cards */
   border: 2px solid #f4a7b9;
   border-radius: 12px;
   padding: 1rem;
-  text-align: center;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -100,7 +156,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Card links */
 .project-card a {
   display: inline-block;
   margin-top: 0.5rem;

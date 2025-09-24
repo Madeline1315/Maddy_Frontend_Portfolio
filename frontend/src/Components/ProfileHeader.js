@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ProfileHeader({ projectCount }) {
   const [followers, setFollowers] = useState(1248);
@@ -6,39 +6,48 @@ function ProfileHeader({ projectCount }) {
 
   const handleFollowClick = () => {
     setIsFollowing(!isFollowing);
-    setFollowers(prev => isFollowing ? prev - 1 : prev + 1);
+    setFollowers((prev) => (isFollowing ? prev - 1 : prev + 1));
   };
 
   return (
     <div className="profile-header">
-      <div className="profile-pic">
-        ML {}
-      </div>
-      
+      <div className="profile-pic">ML</div> {}
+
       <div className="profile-info">
-        <h1>Your Name</h1>
+        <h1>Madeline Lobdell</h1>
         <p>Full Stack Developer</p>
-        
+
         <div className="stats">
-          <div className="stat" onClick={() => alert(`You have ${projectCount} amazing projects!`)}>
+          <div
+            className="stat"
+            onClick={() =>
+              alert(`You have ${projectCount} amazing projects!`)
+            }
+          >
             <span className="number">{projectCount}</span>
-            <span className="label">posts</span>
+            <span className="label">projects</span>
           </div>
-          <div className="stat" onClick={() => alert('Thanks for following!')}>
+          <div
+            className="stat"
+            onClick={() => alert(`You have ${followers} followers!`)}
+          >
             <span className="number">{followers.toLocaleString()}</span>
             <span className="label">followers</span>
           </div>
-          <div className="stat" onClick={() => alert('Following amazing developers!')}>
+          <div
+            className="stat"
+            onClick={() => alert("Following amazing developers!")}
+          >
             <span className="number">320</span>
             <span className="label">following</span>
           </div>
         </div>
 
-        <button 
-          className={`follow-btn ${isFollowing ? 'following' : ''}`}
+        <button
+          className={`follow-btn ${isFollowing ? "following" : ""}`}
           onClick={handleFollowClick}
         >
-          {isFollowing ? 'Following' : 'Follow'}
+          {isFollowing ? "Following" : "Follow"}
         </button>
       </div>
     </div>

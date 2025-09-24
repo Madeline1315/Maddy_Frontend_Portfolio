@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ProjectCard({ project }) {
- const [isHovered, setIsHovered] = useState(false);
-
+  const [isHovered, setIsHovered] = useState(false);
   if (!project) return null;
 
   const handleClick = () => {
-    window.open(project.link, '_blank', 'noopener,noreferrer');
+    if (project.link) {
+      window.open(project.link, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (
-    <div 
+    <div
       className="project-card"
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
