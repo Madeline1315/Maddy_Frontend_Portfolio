@@ -4,14 +4,14 @@ function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:5001/ProjectDetails") // backend URL
+    fetch("http://localhost:5000/ProjectDetails") // your backend URL
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error(err));
   }, []);
 
   return (
-    <div className="Projects">
+    <div className="projects-container">
       {projects.map((project, index) => (
         <div key={index} className="project-card">
           <h3>{project.name} 🌸</h3>
